@@ -11,10 +11,11 @@ RUN apt-get -y -qq update && apt-get -y -qq install \
 
 ADD testsuite.py /root/
 ADD index.html /usr/share/nginx/html/
+ADD default /etc/nginx/sites-available/
 
 RUN chmod 755 /root/testsuite.py
 #RUN /root/testsuite.py fail
 
-EXPOSE 80
+EXPOSE 8181
 
 CMD ["nginx", "-g", "daemon off;"]
