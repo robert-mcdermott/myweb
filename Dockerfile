@@ -16,6 +16,6 @@ ADD default /etc/nginx/sites-available/
 RUN chmod 755 /root/testsuite.py
 #RUN /root/testsuite.py fail
 
-EXPOSE 8181
+EXPOSE 8080
 
 CMD ["nginx", "-g", "daemon off;"]
